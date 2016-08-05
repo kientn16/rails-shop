@@ -3,7 +3,7 @@
   <p class="lead">Shop Online</p>
   <div class="list-group">
     <% @cates.each do |cate| %>
-        <%= link_to cate.name, show_path(cate.id), class: 'list-group-item' %>
+        <%= link_to cate.name, show_cate_path(cate.id), class: 'list-group-item' %>
     <% end %>
   </div>
 </div>

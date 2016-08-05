@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   #frontend
   get '/' => 'site#index', as: :home
-  get 'cate/:id' => 'site#show', as: :show
-
+  get 'product/:id' => 'site#show', as: :show
+  get 'cate/:id' => 'site#show_cate', as: :show_cate
   #facebook authenticate
     get 'auth/:provider/callback', to: 'sessions#create_face'
     get 'auth/failure', to: redirect('/')

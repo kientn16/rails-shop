@@ -12,6 +12,7 @@ Rails.application.config.assets.precompile += %w( bower_components/font-awesome/
 #frontend
 Rails.application.config.assets.precompile += %w( front_end/shop-homepage.css )
 Rails.application.config.assets.precompile += %w( front_end/custom.css )
+Rails.application.config.assets.precompile += %w( front_end/shop-item.css )
 
 #js
 Rails.application.config.assets.precompile += %w( jquery.min.js )
