@@ -10,6 +10,7 @@ class SiteController < ApplicationController
   end
 
   def show_cate
+    @category = Category.find(params[:id])
     @products = Product.where("category_id = #{params[:id]}")
   end
 end
