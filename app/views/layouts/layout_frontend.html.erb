@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Shop Homepage</title>
+
+  <!-- Bootstrap Core CSS -->
+  <%= stylesheet_link_tag    'bower_components/bootstrap/dist/css/bootstrap.min.css', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!-- Custom CSS -->
+  <%= stylesheet_link_tag    'front_end/shop-homepage.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'front_end/custom.css', media: 'all', 'data-turbolinks-track' => true %>
+
+
+</head>
+
+<body>
+
+<%= render file: "includes/nav_frontend" %>
+
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+      <%= render file: "includes/cate_frontend" %>
+
+      <%= yield %>
+  </div>
+  </div>
+</div>
+<!-- /.container -->
+
+<div class="container">
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright &copy; Shop Online In Rails</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<!-- /.container -->
+
+<!-- jQuery -->
+<%= javascript_include_tag 'jquery.min', 'data-turbolinks-track' => true %>
+
+<!-- Bootstrap Core JavaScript -->
+<%= javascript_include_tag 'bower_components/bootstrap/dist/js/bootstrap.min', 'data-turbolinks-track' => true %>
+
+</body>
+
+</html>

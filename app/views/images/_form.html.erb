@@ -1,0 +1,15 @@
+<div class="col-lg-6">
+  <%= form_for @image, html: {multipart: true,class: "nifty_form"} do |f| %>
+      <%= render 'error_messages', object: @image %>
+      <div class="form-group">
+        <%= label_tag(:product, "Product Name") %>
+        <%= f.text_field :product_id, :class => 'form-control', value: @image.product.name, disabled: 'disabled' %>
+      </div>
+      <div class="form-group">
+        <%= label_tag(:image, "Image") %>
+        <%= image_tag @image.image.url(:thumb),style: 'margin-bottom: 10px' %>
+        <%= f.file_field :image, :class => 'form-control' %>
+      </div>
+      <%= f.submit "Submit", :class => 'btn btn-default' %>
+  <% end %>
+</div>

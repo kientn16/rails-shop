@@ -1,0 +1,20 @@
+<div class="col-lg-6">
+  <%= form_for @admin, html: {multipart: true,class: "nifty_form"} do |f| %>
+      <%= render 'error_messages', object: @admin %>
+      <div class="form-group">
+        <%= label_tag(:username, "Username") %>
+        <%= f.text_field :username, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag(:password, "Password") %>
+        <%= f.password_field :password, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag(:role, "Role") %>
+        <%= f.select :role, options_for_select(get_data_roles.map{ |c| [c.name, c.id] }),{include_blank: "Choose Role"}, { :class => 'form-control' } %>
+      </div>
+      <%= f.submit "Submit", :class => 'btn btn-default' %>
+  <% end %>
+</div>

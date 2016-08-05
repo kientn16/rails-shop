@@ -1,0 +1,37 @@
+<div class="col-lg-6">
+  <%= form_for @product, html: {multipart: true,class: "nifty_form"} do |f| %>
+      <%= render 'error_messages', object: @product %>
+      <div class="form-group">
+        <%= label_tag(:name, "Name") %>
+        <%= f.text_field :name, :class => 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= label_tag(:price, "Price") %>
+        <%= f.number_field :price, :class => 'form-control',min: 0 %>
+      </div>
+      <div class="form-group">
+        <%= label_tag(:avatar, "Avatar") %>
+        <%= image_tag @product.avatar.url(:thumb),style: 'margin-bottom: 10px' %>
+        <%= f.file_field :avatar, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag(:image, "Images") %>
+        <%= file_field_tag "images[]", type: :file, multiple: true %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag(:category_id, "Category") %>
+        <%= f.select :category_id, options_for_select(get_data_cate_all.map{ |c| [c.name, c.id] },@product.category_id),{include_blank: "Choose Category"}, { :class => 'form-control' } %>
+      </div>
+      <div class="form-group">
+        <%= label_tag(:status, "Status") %>
+        <%= f.select(:status, [['Active',1],['InActive',0]], {include_blank: "Choose Status"}, { :class => 'form-control'}) %>
+      </div>
+      <div class="form-group">
+        <%= label_tag(:description, "Description") %>
+        <%= f.cktext_area :description, :class => 'form-control' %>
+      </div>
+      <%= f.submit "Submit", :class => 'btn btn-default' %>
+  <% end %>
+</div>

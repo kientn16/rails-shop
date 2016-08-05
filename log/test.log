@@ -1,0 +1,494 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (120.8ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.8ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.9ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (37.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (40.0ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (56.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (40.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (40.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (37.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:24', '2016-08-01 07:38:24', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (88.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (100.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (107.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (107.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (98.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (40.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.9ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (40.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (38.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (43.8ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:38:25', '2016-08-01 07:38:25', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (47.3ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (121.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (42.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (40.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (80.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:25', '2016-08-01 07:41:25', 298486374)
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (37.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (37.9ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (38.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (37.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (38.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (38.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (39.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.6ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (37.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (38.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (41.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (31.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM `users`[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `users` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `products`
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 980190962)[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO `products` (`created_at`, `updated_at`, `id`) VALUES ('2016-08-01 07:41:26', '2016-08-01 07:41:26', 298486374)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `articles`[0m
+  [1m[35m (40.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
