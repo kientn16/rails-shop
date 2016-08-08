@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  # before_filter :authorize
+  before_filter :authorize
+  before_action :require_admin
   helper_method :get_data_cate_all,:get_data_cate
   def index
     @product = Product.paginate(:page => params[:page], :per_page => 5)

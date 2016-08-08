@@ -28,9 +28,12 @@
         <% if current_user %>
             <li><a>Hello <%= current_user.name %></a></li>
             <li><%= link_to signout_path do %><i class="fa fa-sign-out fa-fw"></i> Logout<% end %></li>
+            <% if current_user.admin? %>
+                <li><%= link_to '/admin',target: "_blank" do %><i class="fa fa-sign-out fa-fw"></i> Admin Panel<% end %></li>
+            <% end %>
         <% else %>
-            <li><a href="#">Register</a> </li>
-            <li><%= link_to login_path do %><i class="fa fa-sign-in fa-fw"></i> Login<% end %></li>
+            <li><%= link_to fr_register_path do %><i class="fa fa-sign-in fa-fw"></i> Register<% end %></li>
+            <li><%= link_to fr_login_path do %><i class="fa fa-sign-in fa-fw"></i> Login<% end %></li>
             <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
         <% end %>
       </ul>

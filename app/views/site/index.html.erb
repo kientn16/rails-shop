@@ -75,15 +75,12 @@
       <% @products.each do |product| %>
       <div class="col-sm-4 col-lg-4 col-md-4">
         <div class="thumbnail">
-          <%= image_tag product.avatar(:large)%>
+          <%= link_to "#{image_tag product.avatar(:large)}".html_safe,show_path(product.id) %>
           <div class="caption">
             <h4 class="pull-right">$<%= product.price%></h4>
             <h4><%= link_to product.name,show_path(product.id) %></h4>
 
             <p><%= raw (product.description) %></p>
-            <p>
-              <a href="#" class="btn btn-primary">Buy Now!</a> <%= link_to "More Info",show_path(product.id), class: "btn btn-default" %>
-            </p>
           </div>
           <div class="ratings">
             <p class="pull-right">15 reviews</p>
@@ -93,6 +90,11 @@
               <span class="glyphicon glyphicon-star"></span>
               <span class="glyphicon glyphicon-star"></span>
               <span class="glyphicon glyphicon-star"></span>
+            </p>
+          </div>
+          <div class="order">
+            <p>
+              <a href="#" class="btn btn-primary">Buy Now!</a> <%= link_to "More Info",show_path(product.id), class: "btn btn-default" %>
             </p>
           </div>
         </div>

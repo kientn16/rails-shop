@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   helper_method :get_data_parent, :get_data_parent2, :get_name_parent, :get_status
-  # before_filter :authorize
-
+  before_filter :authorize
+  before_action :require_admin
   def index
     @category = Category.paginate(:page => params[:page], :per_page => 10)
   end

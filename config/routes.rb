@@ -4,24 +4,32 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   #frontend
-  get '/' => 'site#index', as: :home
-  get 'product/:id' => 'site#show', as: :show
-  get 'cate/:id' => 'site#show_cate', as: :show_cate
-  #facebook authenticate
+    root to: "site#index"
+    get '/' => 'site#index', as: :home
+    get 'product/:id' => 'site#show', as: :show
+    get 'cate/:id' => 'site#show_cate', as: :show_cate
+    #facebook authenticate
     get 'auth/:provider/callback', to: 'sessions#create_face'
     get 'auth/failure', to: redirect('/')
     get '/signout', to: 'sessions#destroy_fontend', as: 'signout'
-
+    #auhenticate
     resources :sessions, only: [:create, :destroy]
     resource :home, only: [:show]
 
-    root to: "site#index"
+    #view login
+    get '/login' => 'site#login', as: :fr_login
 
+    #view register
+    get '/register' => 'site#register', as: :fr_register
+    post '/register' => 'site#create', as: :post_register
+
+    post '/login' => 'sessions#create_frontend', as: :post_fr_login
 
 
   #backend
   scope "/admin" do
-      get '/' => 'sessions#new'
+
+      get '/' => 'categories#index'
       resources :categories do
         # get :test1, :on => :collection
       end

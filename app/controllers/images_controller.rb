@@ -1,5 +1,6 @@
 class ImagesController < ApplicationController
-  # before_filter :authorize
+  before_filter :authorize
+  before_action :require_admin
   def index
     @image = Image.paginate(:page => params[:page], :per_page => 5)
   end

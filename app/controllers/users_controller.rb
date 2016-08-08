@@ -1,17 +1,18 @@
 class UsersController < ApplicationController
   before_filter :authorize, :only => ['index','edit']
+  before_action :require_admin, :only => ['index','edit']
   helper_method :get_role,:get_status
   def index
     @user = User.paginate(:page => params[:page],:per_page => 5)
   end
 
   def new
-
+    @user = User.new
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
+    @user = User.new(user_params)
+    if @user.save
       redirect_to login_path, notice: 'User was successfully Created'
     else
       redirect_to get_signup_path
