@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       redirect_to categories_path
     else
       # If user's login doesn't work, send them back to the login form.
-      redirect_to login_path
+      redirect_to login_path,:flash => { :error => "Username or Password invalid" }
     end
   end
 
