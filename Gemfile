@@ -53,7 +53,6 @@ gem "dynamic_form"
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'rails-footnotes', '~> 4.0', :group => :development
-gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'protected_attributes'
 gem 'omniauth-facebook', '~> 1.4.1'
