@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+#seed
 Product.create(name: "Ipanema", description: "The beach of Ipanema is known for its elegant development and its social life.", avatar: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach02.jpg", category_id: 1)
 Product.create(name: "7 Mile Beach", description: "The western coastline contains the island's finest beaches.", avatar: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach03.jpg", category_id: 1)
 Product.create(name: "El Castillo", description: "An elite destination famous for its white sand beaches", avatar: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach04.jpg", category_id: 1)
