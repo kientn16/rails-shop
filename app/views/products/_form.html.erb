@@ -10,15 +10,11 @@
         <%= f.number_field :price, :class => 'form-control',min: 0 %>
       </div>
       <div class="form-group">
-        <%= label_tag(:avatar, "Avatar") %>
+        <%= label_tag(:avatar, "Image") %>
         <%= image_tag @product.avatar.url(:thumb),style: 'margin-bottom: 10px' %>
         <%= f.file_field :avatar, :class => 'form-control' %>
       </div>
 
-      <div class="form-group">
-        <%= label_tag(:image, "Images") %>
-        <%= file_field_tag "images[]", type: :file, multiple: true %>
-      </div>
 
       <div class="form-group">
         <%= label_tag(:category_id, "Category") %>
