@@ -28,7 +28,7 @@ class Product < ActiveRecord::Base
 
   def self.search(params)
     if params
-      products = Product.all
+      products = Product.all.order('created_at desc')
       products = products.where(["name LIKE ? OR description LIKE ?","%#{params[:key_word].strip}%","%#{params[:key_word].strip}%"]) if params[:key_word].present?
       products = products.where(["category_id = ?","#{params[:category_id]}"]) if params[:category_id].present?
       products = products.where(["category_id = ?","#{params[:id]}"]) if params[:id].present?
