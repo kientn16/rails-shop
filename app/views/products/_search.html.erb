@@ -13,7 +13,7 @@
          <%= select_tag "status", options_for_select(@arr.collect {|p| [ p['name'], p['id'] ] }, :selected=>@search[:status]), class: 'form-control' %>
       </div>
       <div class="col-sm-2">
-        <%= select_tag "category_id", options_for_select(Category.all.collect {|p| [ p['name'], p['id'] ] }, :selected=>@search[:category_id]),include_blank: "Choose Category", class: 'form-control' %>
+        <%= select_tag "category_id", options_for_select(Category.all.collect {|p| [p['name'], p['id']]}, :selected=>@search[:category_id]),include_blank: "Choose Category", class: 'form-control' %>
       </div>
 
       <div class="form-actions">

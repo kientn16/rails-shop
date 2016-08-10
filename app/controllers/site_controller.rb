@@ -2,8 +2,9 @@ class SiteController < ApplicationController
   layout 'layout_frontend'
   def index
     # @products = Product.where('status = 1').order('created_at desc').paginate(:page => params[:page], :per_page => 10)
-    @products = Product.search(params[:search]).paginate(:page => params[:page], :per_page => 9)
+    @products = Product.search(params).paginate(:page => params[:page], :per_page => 9)
     @order_item = current_order.order_items.new
+    @search = params || {}
   end
 
   def show
@@ -16,7 +17,10 @@ class SiteController < ApplicationController
 
   def show_cate
     @category = Category.find(params[:id])
-    @products = Product.where("category_id = #{params[:id]}")
+    # @products = Product.where("category_id = #{params[:id]}")
+    @products = Product.search(params)
+    @order_item = current_order.order_items.new
+    @search = params || {}
   end
 
   def login

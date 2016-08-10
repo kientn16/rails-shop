@@ -145,3 +145,15 @@ span.col{
 .txt-bold {
     clear: both;
 }
+
+.morecontent span {
+    display: none;
+}
+.morelink {
+    display: block;
+    color: #821419;
+}
+
+.caption {
+    height: 200px !important;
+}

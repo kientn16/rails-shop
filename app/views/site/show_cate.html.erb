@@ -2,42 +2,7 @@
 <div class="col-md-9">
 
   <!--search box-->
-  <div class="col-md-12 search-box">
-    <div class="input-group" id="adv-search">
-      <input type="text" class="form-control" placeholder="Search for snippets" />
-      <div class="input-group-btn">
-        <div class="btn-group" role="group">
-          <div class="dropdown dropdown-lg">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-            <div class="dropdown-menu dropdown-menu-right" role="menu">
-              <form class="form-horizontal" role="form">
-                <div class="form-group">
-                  <label for="filter">Filter by</label>
-                  <select class="form-control">
-                    <option value="0" selected>All Snippets</option>
-                    <option value="1">Featured</option>
-                    <option value="2">Most popular</option>
-                    <option value="3">Top rated</option>
-                    <option value="4">Most commented</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="contain">Author</label>
-                  <input class="form-control" type="text" />
-                </div>
-                <div class="form-group">
-                  <label for="contain">Contains the words</label>
-                  <input class="form-control" type="text" />
-                </div>
-                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-              </form>
-            </div>
-          </div>
-          <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render 'includes/search_frontend' %>
   <!--end search-->
 
   <div class="clearfix"></div>
@@ -54,11 +19,8 @@
             <div class="caption">
               <h4 class="pull-right">$<%= product.price%></h4>
               <h4><%= link_to product.name,show_path(product.id) %></h4>
-
-              <p><%= raw (product.description) %></p>
-              <p>
-                <a href="#" class="btn btn-primary">Buy Now!</a> <%= link_to "More Info",show_path(product.id), class: "btn btn-default" %>
-              </p>
+              <%= link_to product.category.name,show_cate_path(product.category_id) %>
+              <%= content_tag(:div, content_tag(:p, "#{ product.description}".html_safe), class: "description") %>
             </div>
             <div class="ratings">
               <p class="pull-right">15 reviews</p>
@@ -68,6 +30,11 @@
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
+              </p>
+            </div>
+            <div class="order">
+              <p>
+                <%= render "product_row", product: product, order_item: @order_item %>
               </p>
             </div>
           </div>

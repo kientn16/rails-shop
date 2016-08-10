@@ -31,9 +31,11 @@ class Product < ActiveRecord::Base
       products = Product.all
       products = products.where(["name LIKE ? OR description LIKE ?","%#{params[:key_word].strip}%","%#{params[:key_word].strip}%"]) if params[:key_word].present?
       products = products.where(["category_id = ?","#{params[:category_id]}"]) if params[:category_id].present?
+      products = products.where(["category_id = ?","#{params[:id]}"]) if params[:id].present?
       return products
     else
       self.where('status = 1').order('created_at desc')
+      # return products
     end
   end
 
