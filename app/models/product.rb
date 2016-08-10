@@ -11,4 +11,45 @@ class Product < ActiveRecord::Base
   #relationship db
   belongs_to :category
   has_many :images
+  has_many :comments
+  has_many :order_items
+
+  # default_scope { where(status: 1) }
+
+  def self.check_remove product_id
+    check = OrderItem.find_by_product_id(product_id)
+    if check
+      return false
+    else
+      return true
+    end
+  end
+
+
+  def self.search(params)
+    if params
+      products = Product.all
+      products = products.where(["name LIKE ? OR description LIKE ?","%#{params[:key_word].strip}%","%#{params[:key_word].strip}%"]) if params[:key_word].present?
+      products = products.where(["category_id = ?","#{params[:category_id]}"]) if params[:category_id].present?
+      return products
+    else
+      self.where('status = 1').order('created_at desc')
+    end
+  end
+
+  def self.searchAdmin(params)
+    if params
+      products = Product.all
+      products = products.where(["name LIKE ?","%#{params[:name].strip}%"]) if params[:name].present?
+      products = products.where(["category_id = ?","#{params[:category_id]}"]) if params[:category_id].present?
+      products = products.where(["status = ?","#{params[:status]}"]) if params[:status].present?
+      return products
+    else
+      self.all.order('created_at desc')
+    end
+  end
+
+  def self.get_product_to_order_id(params)
+    Product.joins("INNER JOIN order_items ON order_items.product_id = products.id WHERE order_items.order_id = #{params}")
+  end
 end

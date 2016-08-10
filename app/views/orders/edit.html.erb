@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Update Order <b><%= @order.tax %></b></h1>
+  </div>
+  <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= button_to 'Manage',orders_path,class: 'btn btn-success',style: 'float:left;margin-right:10px',method: :get %>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <%= form_for @order, html: {multipart: true,class: "nifty_form"} do |f| %>
+                <div class="form-group">
+                  <%= label_tag(:tax, "Code") %>
+                  <%= f.text_field :tax, :class => 'form-control','disabled' => 'disabled' %>
+                </div>
+                <div class="form-group">
+                  <%= label_tag(:total, "Total Money") %>
+                  <%= f.text_field :total,:value => num_currency(@order.total), :class => 'form-control','disabled' => 'disabled'%>
+                </div>
+                <div class="form-group">
+                  <%= label_tag(:order_status_id, "Order Status") %>
+                  <%= f.select :order_status_id, options_for_select(OrderStatus.all.map{ |c| [c.name, c.id] },@order.order_status_id),{include_blank: "Choose Status"}, { :class => 'form-control' } %>
+                </div>
+
+                <div class="form-group">
+                  <%= label_tag(:user_id, "User") %>
+                  <%= f.text_field :user_id, :value => @order.user.name,class: "form-control",'disabled' => 'disabled' %>
+                </div>
+
+                <div class="form-group">
+                  <%= label_tag(:created_at, "Created At") %>
+                  <%= f.text_field :created_at, class: "form-control",'disabled' => 'disabled' %>
+                </div>
+                <%= f.submit "Submit", :class => 'btn btn-default' %>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

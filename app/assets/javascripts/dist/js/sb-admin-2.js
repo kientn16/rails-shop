@@ -27,9 +27,6 @@ $(function() {
     });
 
     var url = window.location;
-    // var element = $('ul.nav a').filter(function() {
-    //     return this.href == url;
-    // }).addClass('active').parent().parent().addClass('in').parent();
     var element = $('ul.nav a').filter(function() {
      return this.href == url;
     }).addClass('active').parent();
@@ -41,4 +38,38 @@ $(function() {
             break;
         }
     }
+
+    $('#datetimepicker6').datetimepicker({
+        format : 'YYYY-MM-DD HH:mm:ss'
+    });
+    $('#datetimepicker7').datetimepicker({
+        useCurrent: false, //Important! See issue #1075
+        format : 'YYYY-MM-DD HH:mm:ss'
+    });
+    $("#datetimepicker6").on("dp.change", function (e) {
+        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+    });
+    $("#datetimepicker7").on("dp.change", function (e) {
+        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+    });
+
 });
+
+function get_data_product(orderId,url){
+    $("#add-area").empty();
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {orderId: orderId},
+        success: function(result) {
+            $.each(result, function (key, data) {
+                $("#add-area").append("<tr class='modal-body'>" +
+                    "<td><img class='img-thumbnail float-left' alt='Cinque Terre' width='180'  src='"+data.avatar+"'/></td>" +
+                    "<td>"+data.name+"</td>" +
+                    "<td>"+Number(data.price.toFixed(1)).toLocaleString()+" VND</td>" +
+                    "</tr>"
+                    );
+            })
+        }
+    });
+}

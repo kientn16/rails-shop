@@ -8,7 +8,7 @@ Rails.application.config.assets.precompile += %w( dist/css/timeline.css )
 Rails.application.config.assets.precompile += %w( dist/css/sb-admin-2.css )
 Rails.application.config.assets.precompile += %w( bower_components/morrisjs/morris.css )
 Rails.application.config.assets.precompile += %w( bower_components/font-awesome/css/font-awesome.min.css )
-
+Rails.application.config.assets.precompile += %w( bower_components/bootstrap/dist/css/bootstrap-datetimepicker.css )
 #frontend
 Rails.application.config.assets.precompile += %w( front_end/shop-homepage.css )
 Rails.application.config.assets.precompile += %w( front_end/custom.css )
@@ -17,9 +17,14 @@ Rails.application.config.assets.precompile += %w( front_end/shop-item.css )
 #js
 Rails.application.config.assets.precompile += %w( jquery.min.js )
 Rails.application.config.assets.precompile += %w( bower_components/bootstrap/dist/js/bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( bower_components/jquery/moment-with-locales.js )
+Rails.application.config.assets.precompile += %w( bower_components/bootstrap/dist/js/bootstrap-datetimepicker.js )
 Rails.application.config.assets.precompile += %w( bower_components/metisMenu/dist/metisMenu.min.js )
 
 Rails.application.config.assets.precompile += %w( dist/js/sb-admin-2.js )
+#frontend
+Rails.application.config.assets.precompile += %w( dist/js/frontend/bootstrap-rating.js )
+Rails.application.config.assets.precompile += %w( dist/js/frontend/front_end.js )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path

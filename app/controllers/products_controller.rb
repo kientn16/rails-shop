@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
   before_action :require_admin
   helper_method :get_data_cate_all,:get_data_cate
   def index
-    @product = Product.paginate(:page => params[:page], :per_page => 5)
+    @product = Product.searchAdmin(params).paginate(:page => params[:page], :per_page => 5)
+    @search = params || {}
   end
 
   def new
@@ -56,8 +57,16 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @data = Product.find(params[:id]).destroy
-    redirect_to products_path, notice: 'Product was successfully deleted'
+    check = Product.check_remove(params[:id])
+    if check
+      @data = Product.find(params[:id]).destroy
+      redirect_to products_path, notice: 'Product was successfully deleted'
+    else
+      flash[:warning] = 'Cannot delete Product'
+      redirect_to products_path
+    end
+
+
   end
 
   def get_data_cate_all

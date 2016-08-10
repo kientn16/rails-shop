@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <b>Search</b>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <%= form_tag categories_path, method: :get do %>
+      <div class="col-sm-2">
+        <input type="text" name="name" class="form-control" placeholder="Name" value="<%= @search[:name]%>"/>
+      </div>
+      <div class="col-sm-2">
+        <% @arr = [{"name"=>"Select","id"=>""},{"name"=>"Active", "id"=>"1"}, {"name"=>"In Active", "id"=>"0"}] %>
+         <%= select_tag "status", options_for_select(@arr.collect {|p| [ p['name'], p['id'] ] }, :selected=>@search[:status]), class: 'form-control' %>
+      </div>
+
+      <div class="form-actions">
+        <%= submit_tag "Search", class: 'btn btn-success' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

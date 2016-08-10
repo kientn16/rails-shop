@@ -1,25 +1,14 @@
 
 <div class="row">
   <div class="col-lg-12">
-    <h1 class="page-header">Categories Management</h1>
+    <h1 class="page-header">Products Management</h1>
   </div>
   <div class="clear"></div>
-  <% if flash[:warning] %>
-      <div class="alert alert-warning">
-        <strong>Warning!</strong> <%= flash[:warning] %>
-      </div>
-  <% end %>
-  <% if flash[:success] %>
-      <div class="alert alert-success">
-        <strong>Success!</strong> <%= flash[:success] %>
-      </div>
-  <% end %>
-  <% if notice %>
-      <div class="alert alert-success">
-        <strong>Success!</strong> <%= notice %>
-      </div>
-  <% end %>
+  <%= render 'includes/flash_msg' %>
   <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+  <%= render 'search' %>
 </div>
 <div class="row">
   <div class="col-lg-12">

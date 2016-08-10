@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <b>Search</b>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <%= form_tag orders_path, method: :get do %>
+      <div class="col-sm-2">
+        <input type="text" name="code" class="form-control" placeholder="Code" value="<%= @search[:code]%>"/>
+      </div>
+      <div class="col-sm-2">
+        <%= select_tag "order_status_id", options_for_select(OrderStatus.all.collect {|p| [ p['name'], p['id'] ] }, :selected=>@search[:order_status_id]),include_blank: "Choose Status", class: 'form-control' %>
+      </div>
+      <div class="col-sm-2">
+        <!--<input type="datetime-local" name="start_time" value="<%= @search[:start_time] %>" class="form-control" placeholder="Start Time">-->
+        <input id='datetimepicker6' type="text" name="start_time" value="<%= @search[:start_time] %>" class="form-control" placeholder="Start Time">
+
+      </div>
+      <div class="col-sm-2">
+        <!--<input type="datetime-local" name="end_time" value="<%= @search[:end_time] %>" class="form-control" placeholder="End Time">-->
+        <input id='datetimepicker7' type="text" name="end_time" value="<%= @search[:end_time] %>" class="form-control" placeholder="End Time">
+      </div>
+      <div class="form-actions">
+        <%= submit_tag "Search", class: 'btn btn-success' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+</script>

@@ -3,7 +3,8 @@ class CategoriesController < ApplicationController
   before_filter :authorize
   before_action :require_admin
   def index
-    @category = Category.paginate(:page => params[:page], :per_page => 10)
+    @category = Category.search(params).paginate(:page => params[:page], :per_page => 5)
+    @search = params || {}
   end
 
   def show
@@ -72,6 +73,8 @@ class CategoriesController < ApplicationController
 
 
 private
+
+
   def category_params
     params.require(:category).permit(:name, :parent_id, :status)
   end

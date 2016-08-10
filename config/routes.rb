@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'order_items/create'
+
+  get 'order_items/update'
+
+  get 'order_items/destroy'
+
+  get 'carts/show'
+
   # root to: 'site#index'
   mount Ckeditor::Engine => '/ckeditor'
 
@@ -25,11 +33,26 @@ Rails.application.routes.draw do
 
     post '/login' => 'sessions#create_frontend', as: :post_fr_login
 
+    #post comment
+    post '/site/comment' => 'site#post_comment', as: :post_comment
+
+    #carts
+    resource :cart, only: [:show]
+    resources :order_items, only: [:create, :update, :destroy]
+
+    #order
+    get '/checkout/order' => 'carts#order_now', as: :order_now
+    #screen_success
+    get '/order/success' => 'carts#screen_success', as: :order_success
+
+    #search
+    get '/site' => 'site#search', as: :get_frontend_search
 
   #backend
+
   scope "/admin" do
 
-      get '/' => 'categories#index'
+      get '/' => 'categories#index', as: :root_backend
       resources :categories do
         # get :test1, :on => :collection
       end
@@ -37,7 +60,7 @@ Rails.application.routes.draw do
       # resources :users
       resources :admins
       resources :images
-
+      resources :orders, only: [:index, :edit, :update, :destroy]
       controller :sessions do
         get 'login' => :new, as: :login
         post 'login' => :create
@@ -49,7 +72,7 @@ Rails.application.routes.draw do
       get '/users' => 'users#index', as: :users
       get '/users/:id' => 'users#show', as: :user
       patch '/users/:id' => 'users#update'
-
+      post '/orders/get_data_product' => 'orders#get_data_product', as: :post_get_data_product
 
   end
 

@@ -8,13 +8,26 @@
   <%= stylesheet_link_tag    'dist/css/sb-admin-2.css', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'bower_components/morrisjs/morris.css', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'bower_components/font-awesome/css/font-awesome.min.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bower_components/bootstrap/dist/css/bootstrap-datetimepicker.css', media: 'all', 'data-turbolinks-track' => true %>
 
   <%= javascript_include_tag 'jquery.min', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '//cdn.ckeditor.com/4.5.10/standard/ckeditor.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'bower_components/bootstrap/dist/js/bootstrap.min', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bower_components/jquery/moment-with-locales', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bower_components/bootstrap/dist/js/bootstrap-datetimepicker', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'bower_components/metisMenu/dist/metisMenu.min', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'dist/js/sb-admin-2', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <meta id="authenticity_token" value="<%= form_authenticity_token %>">
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var authenticity_token = $('#authenticity_token').attr('value');
+      $.ajaxSetup({
+        data: {
+          authenticity_token: authenticity_token,
+        }
+      });
+    });
+  </script>
 </head>
 <body>
 <div id="wrapper">

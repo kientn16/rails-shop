@@ -1,6 +1,5 @@
 <% @cates = Category.where('status = 1') %>
 <div class="col-md-3">
-  <p class="lead">Shop Online</p>
   <div class="list-group">
     <% @cates.each do |cate| %>
         <%= link_to cate.name, show_cate_path(cate.id), class: 'list-group-item' %>

@@ -20,6 +20,7 @@
   <%= stylesheet_link_tag    'front_end/custom.css', media: 'all', 'data-turbolinks-track' => true %>
 
 
+  <%= csrf_meta_tags %>
 </head>
 
 <body>
@@ -58,6 +59,8 @@
 
 <!-- Bootstrap Core JavaScript -->
 <%= javascript_include_tag 'bower_components/bootstrap/dist/js/bootstrap.min', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'dist/js/frontend/bootstrap-rating', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'dist/js/frontend/front_end', 'data-turbolinks-track' => true %>
 
 </body>
 

@@ -1,0 +1,59 @@
+<%= form_tag root_path, method: :get do %>
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="form-group">
+        <select name="search[filter]" class="selectpicker form-control">
+          <option value="0" selected>All Snippets</option>
+          <option value="1">Featured</option>
+          <option value="2">Most popular</option>
+          <option value="3">Top rated</option>
+          <option value="4">Most commented</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <div class="form-group">
+          <%= select("search", "category_id", options_for_select(Category.where('status = 1').map{ |c| [c.name, c.id] }), {include_blank: 'Filter by Category'}, class: 'selectpicker form-control') %>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="form-group">
+
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search[key_word]">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<%end%>
+<div class="clearfix"></div>
+<div class="two-space"></div>
+<!--<form class="" role="form">-->
+  <!--<div class="col-md-12 search-box">-->
+    <!--<div class="row">-->
+      <!--<div class="col-xs-12">-->
+          <!--<div class="search-panel col-sm-3">-->
+            <!--<select class="form-control" name="search[filter]">-->
+              <!--<option value="0" selected>All Snippets</option>-->
+              <!--<option value="1">Featured</option>-->
+              <!--<option value="2">Most popular</option>-->
+              <!--<option value="3">Top rated</option>-->
+              <!--<option value="4">Most commented</option>-->
+            <!--</select>-->
+          <!--</div>-->
+          <!--<div class="col-sm-3 search-panel">-->
+            <!--<%= select("search", "category_id", options_for_select(Category.where('status = 1').map{ |c| [c.name, c.id] }), {include_blank: 'None'}, class: 'form-control') %>-->
+          <!--</div>-->
+          <!--<input type="hidden" name="search_param" value="all" id="search_param">-->
+          <!--<input type="text" class="col-sm-5 form-control" name="x" placeholder="Search term...">-->
+          <!--<button class="btn btn-default col-sm-1" type="submit"><span class="glyphicon glyphicon-search"></span></button>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</form>-->

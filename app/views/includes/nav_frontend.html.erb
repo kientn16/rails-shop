@@ -13,17 +13,6 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Services</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
             <li><a>Hello <%= current_user.name %></a></li>
@@ -36,6 +25,9 @@
             <li><%= link_to fr_login_path do %><i class="fa fa-sign-in fa-fw"></i> Login<% end %></li>
             <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
         <% end %>
+        <!--Cart-->
+          <li class="cart-text"><%= render 'layouts/cart_text' %></li>
+        <!--end cart-->
       </ul>
     </div>
     <!-- /.navbar-collapse -->

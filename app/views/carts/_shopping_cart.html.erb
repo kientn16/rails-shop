@@ -1,0 +1,64 @@
+<div class="col-md-12">
+<% if !@order_item.nil? && @order_item.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% @order_item.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+<% if @order_items.size == 0 %>
+    <p class="text-center">
+      There are no items in your shopping cart.  Please <%= link_to "go back", root_path %> and add some items to your cart.
+    </p>
+<% else %>
+      <h3>My Cart</h3>
+    <div class="col-md-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <td> <%= "#{@order_items.size} PRODUCTS" %></td>
+            <td class="width_40"></td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td></td>
+          </tr>
+        </thead>
+        <!--Product list-->
+        <tbody>
+        <% @order_items.each do |order_item| %>
+            <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-4 shop-online">
+      <!--summary-->
+      <h5>Infomation Cart</h5>
+      <hr>
+      <div class="summary-main table mtm">
+        <div class="summary-subtotal row">
+          <span class="col">Provisional:</span>
+          <span class="col txt-right"><%= num_currency(@sum_price_order) %></span>
+        </div>
+      </div>
+      <hr>
+      <div class="summary-total table border-grey-top mtm ptm">
+        <div class="row">
+            <span class="col txt-size-small">
+                <span class="txt-bold txt-black">Amount:</span>
+            </span>
+          <h4 class="col txt-right txt-bold txt-black"><%= num_currency(@sum_price_order) %></h4>
+        </div>
+      </div>
+      <hr>
+      <% if current_user != nil %>
+      <%= link_to "Order Now".html_safe, order_now_path, :id => "button_id", :class => "btn btn-info btn-block" %>
+      <% else %>
+          <%= link_to "Order Now".html_safe, "", :id => "button_id", :class => "btn btn-info btn-block", 'disabled' => 'disabled' %>
+      <%end %>
+    </div>
+<% end %>
+  </div>

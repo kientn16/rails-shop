@@ -364,3 +364,15 @@ ul {
 .clear {
     clear: both;
 }
+
+.float-left {
+    float: left;
+    margin-right: 10px;
+}
+.float-right{
+    float: right;
+}
+.no-padding {
+    padding: 0;
+    margin: 0;
+}

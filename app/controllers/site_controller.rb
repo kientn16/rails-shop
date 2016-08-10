@@ -1,11 +1,17 @@
 class SiteController < ApplicationController
   layout 'layout_frontend'
   def index
-    @products = Product.where('status = 1')
+    # @products = Product.where('status = 1').order('created_at desc').paginate(:page => params[:page], :per_page => 10)
+    @products = Product.search(params[:search]).paginate(:page => params[:page], :per_page => 9)
+    @order_item = current_order.order_items.new
   end
 
   def show
+    session[:return_to] = request.original_url
     @product = Product.find(params[:id])
+    @comments = Comment.where("product_id = #{params[:id]}").order('created_at desc').paginate(:page => params[:page_comment], :per_page => 5)
+    @avg_rating = Comment.avg_rating(params[:id])
+    @order_item = current_order.order_items.new
   end
 
   def show_cate
@@ -32,9 +38,21 @@ class SiteController < ApplicationController
 
 
 
+  def post_comment
+    @params = params[:comment]
+    if @params['product_id']
+      @product = Product.find(@params['product_id'])
+      @product.comments.create(content: @params[:content], vote: @params[:vote], user_id: current_user.id)
+      redirect_to :back, notice: 'Comment was successfully created'
+    end
+  end
 
   private
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+
+  def comment_params
+    params.require(:comment).permit(:content,:vote,:user_id,:product_id)
   end
 end

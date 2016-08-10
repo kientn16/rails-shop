@@ -56,3 +56,4 @@ gem 'rails-footnotes', '~> 4.0', :group => :development
 gem 'bootstrap-sass'
 gem 'protected_attributes'
 gem 'omniauth-facebook', '~> 1.4.1'
+gem 'pry-rails', :group => :development

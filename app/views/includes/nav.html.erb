@@ -7,7 +7,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+    <a class="navbar-brand" href="<%= root_backend_path%>">Admin Cpanel</a>
   </div>
   <!-- /.navbar-header -->
 
@@ -17,9 +17,9 @@
         <li><p>Hello <%= current_user.name %></p></li>
         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
         <li><%= link_to logout_path do %><i class="fa fa-sign-out fa-fw"></i> Logout<% end %></li>
+        <li><%= link_to root_path do %><i class="fa fa-sign-in fa-fw"></i> Frontend<% end %></li>
     <% else %>
         <li><%= link_to login_path do %><i class="fa fa-sign-in fa-fw"></i> Login<% end %></li>
-        <li><%= link_to get_signup_path do %><i class="fa fa-sign-in fa-fw"></i> Register<% end %></li>
         <li><%= link_to root_path do %><i class="fa fa-sign-in fa-fw"></i> Frontend<% end %></li>
     <% end %>
       <!-- /.dropdown-user -->
@@ -32,7 +32,7 @@
       <ul class="nav" id="side-menu">
         <li><%= link_to categories_path do %><i class="fa fa-table fa-fw"></i> Categories <% end %></li>
         <li><%= link_to products_path do %><i class="fa fa-table fa-fw"></i> Products <% end %></li>
-        <li><%= link_to images_path do %><i class="fa fa-table fa-fw"></i> Images <% end %></li>
+        <li><%= link_to orders_path do %><i class="fa fa-table fa-fw"></i> Orders <% end %></li>
         <li><%= link_to users_path do %><i class="fa fa-table fa-fw"></i> Users <% end %></li>
       </ul>
     </div>
