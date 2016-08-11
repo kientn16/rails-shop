@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
     redirect_to login_path unless current_user
   end
 
+  def authorize_frontend
+    redirect_to post_fr_login_path unless current_user
+  end
+
   def require_admin
     redirect_to login_path unless current_user.admin?
   end

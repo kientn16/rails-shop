@@ -1,0 +1,2 @@
+module TestRspecHelper
+end

@@ -1,0 +1,16 @@
+name,description,avatar,category_id,status,price
+Ipanema,The beach of Ipanema is known for its elegant development and its social life,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach02.jpg,1,1,100000
+7 Mile Beach,The western coastline contains the island's finest beaches.,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach03.jpg,2,1,300000
+El Castillo,An elite destination famous for its white sand beaches,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach04.jpg,3,1,200000
+Machu Picchu,"Machu Picchu was built around 1450, at the height of the Inca Empire",http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/history02.jpg,3,1,150000
+Dunrobin Castle,The western coastline contains the island's finest beaches.,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach03.jpg,1,1,150000
+Palace of Westminster,An elite destination famous for its white sand beaches,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach04.jpg,3,1,120000
+Dolomites,"Machu Picchu was built around 1450, at the height of the Inca Empire",http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/history02.jpg,2,1,110000
+Chamonix,The western coastline contains the island's finest beaches.,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach03.jpg,2,1,250000
+Vail,An elite destination famous for its white sand beaches,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach04.jpg,1,1,150000
+Ipanema,"Machu Picchu was built around 1450, at the height of the Inca Empire",http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/history02.jpg,3,1,150000
+7 Mile Beach,The western coastline contains the island's finest beaches.,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach03.jpg,2,1,350000
+Vail,An elite destination famous for its white sand beaches,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach04.jpg,3,1,450000
+Ipanema,"Machu Picchu was built around 1450, at the height of the Inca Empire",http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/history02.jpg,1,1,152000
+8 Mile Beach,The western coastline contains the island's finest beaches.,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach03.jpg,3,1,150000
+Vail,An elite destination famous for its white sand beaches,http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach04.jpg,2,1,150000

@@ -25,7 +25,6 @@
               <th>Name</th>
               <th>Price</th>
               <th>Avatar</th>
-              <th style="width: 300px">Description</th>
               <th>Category</th>
               <th>Status</th>
               <th>Created At</th>
@@ -38,14 +37,14 @@
                 <td><%= p.name %></td>
                 <td><%= p.price %></td>
                 <td><%= image_tag p.avatar.url(:thumb) %></td>
-                <td><%= raw p.description %></td>
                 <td><%= p.category.name %></td>
                 <td><%= p.status %></td>
                 <td><%= p.created_at %></td>
                 <td>
                   <div class="row">
-                    <div class="col-sm-4"><%= button_to 'Edit',edit_product_path(id: p.id),class: 'btn btn-warning',style: 'float:left;margin-right:10px',method: :get %></div>
-                    <div class="col-sm-6"><%= button_to('Delete',p, {:onclick => "return confirm('Are you sure?')", :method => :delete, :remote => true,class: 'btn btn-danger'}) %></div>
+                    <div class="col-sm-3"><%= button_to 'Edit',edit_product_path(id: p.id),class: 'btn btn-warning',style: 'float:left;margin-right:10px',method: :get %></div>
+                    <div class="col-sm-4"><%= button_to('Delete',p, {:onclick => "return confirm('Are you sure?')", :method => :delete, :remote => true,class: 'btn btn-danger'}) %></div>
+                    <%= link_to "Show", product_path(p.id), :class => 'col-sm-3 btn btn-info' %>
                   </div>
                 </td>
               </tr>

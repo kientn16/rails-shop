@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 20160809014728) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
-    t.integer  "parent_id",  limit: 4,   default: 0
+    t.integer  "parent_id",  limit: 4
     t.integer  "status",     limit: 4
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -114,23 +114,17 @@ ActiveRecord::Schema.define(version: 20160809014728) do
     t.integer  "price",               limit: 4
   end
 
-  create_table "roles", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
   create_table "users", force: :cascade do |t|
-    t.string   "name",             limit: 255,             null: false
-    t.string   "email",            limit: 255,             null: false
-    t.string   "password_digest",  limit: 255
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
-    t.integer  "status",           limit: 4,   default: 1
-    t.integer  "role",             limit: 4,   default: 2
+    t.string   "name",             limit: 255, null: false
+    t.string   "email",            limit: 255, null: false
+    t.string   "password_digest",  limit: 255, null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "status",           limit: 4
+    t.integer  "role",             limit: 4
     t.string   "provider",         limit: 255
     t.string   "uid",              limit: 255
-    t.string   "oauth_token",      limit: 500
+    t.string   "oauth_token",      limit: 255
     t.datetime "oauth_expires_at"
   end
 

@@ -29,12 +29,14 @@ class SessionsController < ApplicationController
       @user = User.new
     end
     @user.password = SecureRandom.hex(9)
-    @user.email = ""
+    @user.email = SecureRandom.hex(9)+"@mail.com"
     @user.provider = auth.provider
     @user.uid = auth.uid
     @user.name = auth.info.name
     @user.oauth_token = auth.credentials.token
     @user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+    @user.role = 2
+    @user.status = 1
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path
@@ -58,12 +60,13 @@ class SessionsController < ApplicationController
 
     else
       # If user's login doesn't work, send them back to the login form.
-      redirect_to fr_login_path
+      redirect_to fr_login_path, :flash => { :error => "Username or Password invalid" }
     end
   end
 
   def destroy_fontend
     session[:user_id] = nil
+    session[:order_id] = nil
     session[:return_to] = nil
     redirect_to root_path
   end

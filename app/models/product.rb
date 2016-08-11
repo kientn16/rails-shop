@@ -5,7 +5,7 @@ class Product < ActiveRecord::Base
   validates_presence_of :avatar, :on => :create
   validates_presence_of :description, :category_id, :status, :price
   #upload image
-  has_attached_file :avatar, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :avatar, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150>" }, default_url: "http://yantrahub.com/news/wp-content/uploads/2016/07/icon-user-default-150x150.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   #relationship db

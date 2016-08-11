@@ -1,0 +1,4 @@
+name,email,password,role,status
+Super Admin,admin@gmail.com,123456,1,1
+SA,admin2@gmail.com,123456,1,1
+Cus,cus@gmail.com,123456,2,1

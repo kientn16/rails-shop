@@ -57,3 +57,7 @@ gem 'bootstrap-sass'
 gem 'protected_attributes'
 gem 'omniauth-facebook', '~> 1.4.1'
 gem 'pry-rails', :group => :development
+group :test, :development do
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
+end

@@ -59,10 +59,10 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @check = Category.where('parent_id=' + params[:id]).count
-    if @check > 0
-      @data = Category.find(params[:id])
-      flash[:warning] = "Cannot delete Category: "+@data.name
+    check = Category.check_remove(params[:id])
+    if check
+      data = Category.find(params[:id])
+      flash[:warning] = "Cannot delete Category: "+data.name
       redirect_to categories_path
     else
       Category.find(params[:id]).destroy
