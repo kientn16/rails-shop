@@ -3,27 +3,44 @@ RSpec.describe Product, :type => :model do
   # before(:each) do
   #   load "#{Rails.root}/db/seeds.rb"
   # end
+  # it { is_expected.to validate_presence_of :name }
+  # it { is_expected.to validate_presence_of :description }
+  # it { is_expected.to validate_presence_of :category_id }
+  # it { is_expected.to validate_presence_of :status }
+  # it { is_expected.to validate_presence_of :price }
+
   describe "search" do
-    Product.create(name: "Quan Ao",
-                             description: "Quan Ao",
-                             status: 1,
-                             category_id: 1,
-                             price: 1000000,
-                             avatar: File.new(Rails.root + 'spec/fixtures/images/rails.png')
-    )
-    result_search = Product.where("name LIKE ? AND status = ?", "%Quan%",1).count
+    # result_search = Product.where("name LIKE ? AND status = ?", "%Quan%",1).count
     it "return result that match" do
-      expect(Product.searchAdmin(:name => "Quan",:category_id => 1).count).to eq result_search
+      role = FactoryGirl.create(:product,
+                                name: "Head Buster",
+                                description: "Quan Ao",
+                                status: 1,
+                                category_id: 1,
+                                price: 1000000,
+                                avatar: File.new(Rails.root + 'spec/fixtures/images/rails.png'))
+      expect(Product.searchAdmin(:name => "Head",:category_id => 1)).to eq [role]
+      # expect(Product.searchAdmin(:name => "Quan",:category_id => 1).count).to eq result_search
     end
-    #
+
     it "not return result if not match" do
-      expect(Product.searchAdmin(:name => "!@#",:category_id => 2).count).to_not eq result_search
+      role = FactoryGirl.create(:product,
+                                name: "Head Buster",
+                                description: "Quan Ao",
+                                status: 1,
+                                category_id: 1,
+                                price: 1000000,
+                                avatar: File.new(Rails.root + 'spec/fixtures/images/rails.png'))
+      expect(Product.searchAdmin(:name => "!@#",:category_id => 2)).to_not eq [role]
     end
     #
-    it "to return all result if not get params keyword" do
+    it "to return all result if not get params" do
       expect(Product.searchAdmin(:name => "",:category_id => "").count).to eq Product.all.count
     end
   end
+
+
+
 
   #comment
   # context "with 2 or more comments" do
