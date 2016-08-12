@@ -54,4 +54,5 @@ class Product < ActiveRecord::Base
   def self.get_product_to_order_id(params)
     Product.joins("INNER JOIN order_items ON order_items.product_id = products.id WHERE order_items.order_id = #{params}")
   end
+
 end
