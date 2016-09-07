@@ -19,33 +19,35 @@ class SessionsController < ApplicationController
     end
   end
 
-  def create_face
-    auth = env["omniauth.auth"]
-    check = User.find_by_uid(auth.uid)
-    #check uid trong he thong
-    if check
-      @user = User.find_by_uid(auth.uid)
-    else
-      @user = User.new
-    end
-    @user.encrypted_password = SecureRandom.hex(9)
-    @user.password = SecureRandom.hex(9)
-    @user.email = SecureRandom.hex(9)+"@mail.com"
-    @user.provider = auth.provider
-    @user.uid = auth.uid
-    @user.name = auth.info.name
-    @user.oauth_token = auth.credentials.token
-    @user.oauth_expires_at = Time.at(auth.credentials.expires_at)
-    @user.role = 2
-    # binding.pry
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to root_path
-    else
-      # binding.pry
-      render json: @user.errors.full_messages.inspect
-    end
-  end
+  # def create_face
+  #   auth = env["omniauth.auth"]
+  #   # check = User.find_by_uid(auth.uid)
+  #   #check uid trong he thong
+  #   # if check
+  #   #   @user = User.find_by_uid(auth.uid)
+  #   # else
+  #   #   @user = User.new
+  #   # end
+  #   @user = User.new
+  #   @user.encrypted_password = SecureRandom.hex(9)
+  #   @user.password = SecureRandom.hex(9)
+  #   @user.email = SecureRandom.hex(9)+"@mail.com"
+  #   @user.provider = auth.provider
+  #   @user.uid = auth.uid
+  #   @user.name = auth.info.name
+  #   @user.oauth_token = auth.credentials.token
+  #   @user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+  #   @user.role = 2
+  #   # binding.pry
+  #   if @user.save
+  #     # binding.pry
+  #     session[:user_id] = @user.id
+  #     redirect_to root_path
+  #   else
+  #     # binding.pry
+  #     render json: @user.errors.full_messages.inspect
+  #   end
+  # end
 
   def create_frontend
     user = User.find_by_email(params[:email])

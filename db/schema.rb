@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907070403) do
+ActiveRecord::Schema.define(version: 20160907081852) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -137,7 +137,7 @@ ActiveRecord::Schema.define(version: 20160907070403) do
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
     t.string   "provider",               limit: 255
-    t.integer  "uid",                    limit: 4
+    t.integer  "uid",                    limit: 8
     t.string   "oauth_token",            limit: 255
     t.datetime "oauth_expires_at"
   end
