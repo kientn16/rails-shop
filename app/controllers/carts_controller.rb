@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_filter :authorize_frontend
+  before_action :authenticate_user!
   layout 'layout_cart_frontend'
   def show
     # binding.pry

@@ -1,0 +1,1 @@
+json.partial! "trade_marks/trade_mark", trade_mark: @trade_mark

@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
+  layout 'layout_frontend'
   before_filter :authorize, :only => ['index','edit']
   before_action :require_admin, :only => ['index','edit']
   helper_method :get_role,:get_status
   def index
-    @user = User.paginate(:page => params[:page],:per_page => 5)
+    @users = User.paginate(:page => params[:page],:per_page => 5)
   end
 
   def new

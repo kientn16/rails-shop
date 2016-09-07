@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-
+  devise_for :users, controllers: {
+      sessions: 'users/sessions'
+  }
+  resources :trade_marks
   get 'order_items/create'
-
   get 'order_items/update'
-
   get 'order_items/destroy'
-
   get 'carts/show'
-
   # root to: 'site#index'
   mount Ckeditor::Engine => '/ckeditor'
-
   #frontend
     root to: "site#index"
     get '/' => 'site#index', as: :home
@@ -21,7 +19,7 @@ Rails.application.routes.draw do
     get 'auth/failure', to: redirect('/')
     get '/signout', to: 'sessions#destroy_fontend', as: 'signout'
     #auhenticate
-    resources :sessions, only: [:create, :destroy]
+    # resources :sessions, only: [:create, :destroy]
     resource :home, only: [:show]
 
     #view login
@@ -61,11 +59,12 @@ Rails.application.routes.draw do
       resources :admins
       resources :images
       resources :orders, only: [:index, :edit, :update, :destroy]
-      controller :sessions do
-        get 'login' => :new, as: :login
-        post 'login' => :create
-        get 'logout' => :destroy, as: :logout
-      end
+
+      # controller :sessions do
+      #   get 'login' => :new, as: :login
+      #   post 'login' => :create
+      #   get 'logout' => :destroy, as: :logout
+      # end
       get '/signup' => 'users#new', as: :get_signup
       post '/users' => 'users#create', as: :post_signup
       get '/users/:id/edit' => 'users#edit', as: :edit_user

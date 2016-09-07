@@ -62,8 +62,9 @@ group :test, :development do
   gem 'factory_girl_rails'
 end
 group :test do
-  gem 'faker'
+  gem "faker", "~> 1.4.3"
   gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
 end
+gem 'devise', '~> 4.2'

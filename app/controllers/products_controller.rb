@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :require_admin
   helper_method :get_data_cate_all,:get_data_cate
   def index
-    @product = Product.searchAdmin(params).paginate(:page => params[:page], :per_page => 5)
+    @products = Product.paginate(:page => params[:page], :per_page => 5)
     @search = params || {}
   end
 
