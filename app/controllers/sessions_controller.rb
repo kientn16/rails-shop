@@ -28,6 +28,7 @@ class SessionsController < ApplicationController
     else
       @user = User.new
     end
+    @user.encrypted_password = SecureRandom.hex(9)
     @user.password = SecureRandom.hex(9)
     @user.email = SecureRandom.hex(9)+"@mail.com"
     @user.provider = auth.provider
@@ -36,11 +37,12 @@ class SessionsController < ApplicationController
     @user.oauth_token = auth.credentials.token
     @user.oauth_expires_at = Time.at(auth.credentials.expires_at)
     @user.role = 2
-    @user.status = 1
+    # binding.pry
     if @user.save
       session[:user_id] = @user.id
       redirect_to root_path
     else
+      # binding.pry
       render json: @user.errors.full_messages.inspect
     end
   end
